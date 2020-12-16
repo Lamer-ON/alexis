@@ -16,20 +16,35 @@ document.addEventListener("DOMContentLoaded", function () {
     ImgAll = document.querySelectorAll(".test-img"),
     Img1 = document.querySelector(".test-img-1"),
     cardAll = document.querySelectorAll(".testimonials_card"),
-    card1 = document.querySelector(".card1");
+    card1 = document.querySelector(".card1"),
+    team_cardAll = document.querySelectorAll(".our-team_items"),
+    team_card1 = document.querySelector(".our-team_items-1"),
+    team_modalAll = document.querySelectorAll(".our-team_popup"),
+    team_modal1 = document.querySelector(".our-team_popup-1");
 
-  //============ burger
-  header__burger.addEventListener("click", () => {
-    header__burger.classList.toggle("active");
-    header__menu.classList.toggle("active");
-    back.classList.toggle('lock');
-  });
-  header__list.addEventListener("click", () => {
-    back.classList.toggle('lock');
-    header__menu.classList.toggle("active");
-    header__burger.classList.toggle("active");
-    //header__list.classList.remove("active");
-  });
+
+  //============ our-team
+  team_modal1.classList.add("active");
+  team_card1.classList.add("click");
+  for (let i = 0; i < team_cardAll.length; i++) {
+    team_cardAll[i].addEventListener("click", () => {
+      for (let i = 0; i < team_modalAll.length; i++) {
+        team_modalAll[i].classList.remove("active");
+      }
+      for (let i = 0; i < team_cardAll.length; i++) {
+        team_cardAll[i].classList.remove("click");
+      }
+
+      team_modalAll[i].classList.add("active");
+      team_cardAll[i].classList.add("click");
+
+
+
+      //cardAll[i].classList.add("active");
+      //ImgAll[i].classList.add("active");
+      //cardAll[i].classList.add("active");
+    });
+  }
 
   //============ testimonials radio
   card1.classList.add("active");
@@ -48,6 +63,25 @@ document.addEventListener("DOMContentLoaded", function () {
       cardAll[i].classList.add("active");
     });
   }
+
+
+
+
+
+  //============ burger
+  header__burger.addEventListener("click", () => {
+    header__burger.classList.toggle("active");
+    header__menu.classList.toggle("active");
+    back.classList.toggle('lock');
+  });
+  header__list.addEventListener("click", () => {
+    back.classList.toggle('lock');
+    header__menu.classList.toggle("active");
+    header__burger.classList.toggle("active");
+    //header__list.classList.remove("active");
+  });
+
+
 
 
 

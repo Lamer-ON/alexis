@@ -784,6 +784,29 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ============== our-team ==============*/
 
 .section-our-team {
@@ -906,21 +929,34 @@ body {
   display: none;
 }
 
-.our-team_items:hover::before {
+/*.our-team_items:hover::before {
+  display: block;
+}*/
+
+.our-team_items.click::before {
   display: block;
 }
 
-.our-team_items:hover>.our-team_popup,
+/*.our-team_items-1::before {
+  display: block;
+
+}*/
+
+/*.our-team_items:hover>.our-team_popup,
 .our-team_items:focus>.our-team_popup {
   display: block;
+}*/
+
+.our-team_items {
+  margin-bottom: 312px;
 }
 
-.our-team_items-1:hover,
+/*.our-team_items-1:hover,
 .our-team_items-2:hover,
 .our-team_items-3:hover,
 .our-team_items-4:hover {
   margin-bottom: 312px;
-}
+}*/
 
 @media (max-width: 1140px) {
   .our-team_card {
@@ -1111,6 +1147,29 @@ body {
   align-items: center;
   margin-right: 30px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ============== four-point-five==============*/
 
