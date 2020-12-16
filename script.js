@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   //  // обычное устройство
   //}
 
-  let header__burger = document.querySelector(".header__burger"),
-    header_menu = document.querySelector(".header__menu"),
+  const header__burger = document.querySelector(".header__burger"),
+    header__menu = document.querySelector(".header__menu"),
     back = document.querySelector("body"),
     header__list = document.querySelector(".header__list"),
     video = document.querySelector(".video"),
@@ -19,22 +19,24 @@ document.addEventListener("DOMContentLoaded", function () {
     card1 = document.querySelector(".card1");
 
   //============ burger
-  header__burger.onclick = function () {
+  header__burger.addEventListener("click", () => {
     header__burger.classList.toggle("active");
-    header_menu.classList.toggle("active");
-    //back.classList.toggle('lock');
-  };
-  header__list.onclick = function () {
-    header__list.classList.remove("active");
-    //back.classList.toggle('lock');
-  };
+    header__menu.classList.toggle("active");
+    back.classList.toggle('lock');
+  });
+  header__list.addEventListener("click", () => {
+    back.classList.toggle('lock');
+    header__menu.classList.toggle("active");
+    header__burger.classList.toggle("active");
+    //header__list.classList.remove("active");
+  });
 
   //============ testimonials radio
   card1.classList.add("active");
   Img1.classList.add("active");
 
   for (let i = 0; i < radioAll.length; i++) {
-    radioAll[i].addEventListener("click", function () {
+    radioAll[i].addEventListener("click", () => {
       for (let i = 0; i < cardAll.length; i++) {
         cardAll[i].classList.remove("active");
       }
