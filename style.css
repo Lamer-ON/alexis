@@ -1001,19 +1001,34 @@ body {
     top: 330px;
   }
 
-  .our-team_items-1:hover,
-  .our-team_items-2:hover {
+  .our-team_items-1,
+  .our-team_items-2 {
     margin-bottom: 412px;
   }
 
-  .our-team_items-3:hover>.our-team_popup-3,
+  /*.our-team_items-1:hover,
+  .our-team_items-2:hover {
+    margin-bottom: 412px;
+  }*/
+
+  /*.our-team_items-3:hover>.our-team_popup-3,
   .our-team_items-4:hover>.our-team_popup-4 {
     top: 790px;
+  }*/
+  /*.our-team_items-3:hover>.our-team_popup-3,
+  .our-team_items-4:hover>.our-team_popup-4 {
+    top: 790px;
+  }*/
+  .our-team_popup-3,
+  .our-team_popup-4 {
+    /*top: 790px;*/
+    top: 1190px;
   }
 
   .our-team_items-3::before,
   .our-team_items-4::before {
-    top: 710px;
+    /*top: 710px;*/
+    top: 1110px;
   }
 }
 
