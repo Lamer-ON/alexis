@@ -1,11 +1,6 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-  //if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-  //  // мобильное устройство
-  //} else {
-  //  // обычное устройство
-  //}
 
   const header__burger = document.querySelector(".header__burger"),
     header__menu = document.querySelector(".header__menu"),
@@ -44,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (window.matchMedia("(max-width: 960px)").matches) {
-    /* the viewport is at least 400 pixels wide */
     team_card1.classList.add("click");
     team_modal1.classList.add("active");
     team_card3.classList.add("click");
@@ -111,10 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
-
-
-
   //============ burger
   header__burger.addEventListener("click", () => {
     header__burger.classList.toggle("active");
@@ -125,17 +115,6 @@ document.addEventListener("DOMContentLoaded", function () {
     back.classList.toggle('lock');
     header__menu.classList.toggle("active");
     header__burger.classList.toggle("active");
-    //header__list.classList.remove("active");
   });
 
-
-
-
-
-  //window.addEventListener("keydown", function (e) {
-  //  if (e.keyCode === 27 & document.querySelector('.popup-wrapper').style.display !== 'none') {
-  //    e.preventDefault();
-  //    document.querySelector('.popup-wrapper').classList.add('visually-hidden');
-  //  }
-  //});
 });
