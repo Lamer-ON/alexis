@@ -372,7 +372,8 @@ body {
 }
 
 .we-design_link {
-  margin-bottom: 150px;
+  /*margin-bottom: 150px;*/
+  margin-bottom: 83px;
   color: #fff;
   background: #fc5f45;
 }
@@ -399,30 +400,22 @@ body {
 
 .profits_items .card-title {
   text-transform: uppercase;
-  position: relative;
 }
 
-.profits_items .card-title::before {
-  content: '';
-  position: absolute;
-  height: 42px;
-  width: 42px;
-  top: -70px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-repeat: no-repeat;
+.profits_items .card-title {
+  background: center top/42px 42px no-repeat;
+  padding-top: 80px;
 }
 
-
-.fixed::before {
+.profits_items:nth-child(1) .card-title {
   background-image: url(img/profits-1.png);
 }
 
-.receive::before {
+.profits_items:nth-child(2) .card-title {
   background-image: url(img/profits-2.png);
 }
 
-.satisfaction::before {
+.profits_items:nth-child(3) .card-title {
   background-image: url(img/profits-3.png);
 }
 
@@ -447,12 +440,8 @@ body {
     width: 90%;
   }
 
-  .we-design_profits {
-    /*justify-content: space-around;*/
-  }
 
   .profits_items {
-    /*flex-basis: 25%;*/
     flex-basis: 30%;
   }
 
@@ -461,7 +450,6 @@ body {
 @media (max-width: 960px) {
   .profits_items {
     flex-basis: 15%;
-    /*flex-basis: 30%;*/
   }
 
   .we-design_profits {
@@ -486,7 +474,7 @@ body {
 
 @media (max-width: 540px) {
   .section-we-design.section {
-    padding-bottom: 0;
+    padding-bottom: 50px;
   }
 
   .section-title {
@@ -495,7 +483,7 @@ body {
   }
 
   .we-design_link {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   .we-design_profits {
@@ -506,8 +494,12 @@ body {
     flex-basis: 75%;
   }
 
+  .profits_items .card-title {
+    padding-top: 50px;
+  }
+
   .we-design_card-title {
-    margin-bottom: 90px;
+    margin-bottom: 30px;
   }
 
   .we-design-img {
@@ -635,7 +627,7 @@ body {
 }
 
 .our-focus_items {
-  padding: 105px 20px 58px;
+  padding: 54px 20px 58px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -663,21 +655,27 @@ body {
   background-repeat: no-repeat;
 }
 
-.web::before {
+.our-focus_items .card-title {
+  background: center top/55px 50px no-repeat;
+  padding-top: 50px;
+}
+
+.our-focus_items .web {
   background-image: url(img/focus-1.png);
 }
 
-.ux::before {
+.our-focus_items .ux {
   background-image: url(img/focus-2.png);
 }
 
-.photo::before {
+.our-focus_items .photo {
   background-image: url(img/focus-3.png);
 }
 
-.app::before {
+.our-focus_items .app {
   background-image: url(img/focus-4.png);
 }
+
 
 @media (max-width: 1140px) {
   .our-focus_card {
@@ -1169,7 +1167,7 @@ body {
 
 .four-point-five_items .card-title {
   margin-bottom: 20px;
-  margin-top: 50px;
+  padding-top: 80px;
   position: relative;
   color: #fff;
   line-height: 27px;
@@ -1177,74 +1175,44 @@ body {
 
 .four-point-five_items p {
   color: #fff;
-  margin-bottom: 30px;
 }
 
 
-
-
-
-
-
-.four-point-five_items .card-title::before {
-  content: '';
-  position: absolute;
-  top: -80px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-repeat: no-repeat;
+.four-point-five_items .text {
+  background: center bottom/15px 16px no-repeat;
+  padding-bottom: 50px;
 }
 
-.four-point-five_items .card-title::after {
-  content: '';
-  width: 15px;
-  height: 16px;
-  position: absolute;
-  top: 105px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-repeat: no-repeat;
-}
-
-.projects::before {
-  width: 51px;
-  height: 48px;
-  background-image: url(img/45-1.png);
-}
-
-.projects::after {
+.four-point-five_items:nth-child(1) .text {
   background-image: url(img/45-orange.png);
 }
 
-.satisfied::before {
-  width: 47px;
-  height: 50px;
-  background-image: url(img/45-2.png);
-}
-
-.satisfied::after {
+.four-point-five_items:nth-child(2) .text {
   background-image: url(img/45-green.png);
 }
 
-.feedbacks::before {
-  width: 51px;
-  height: 52px;
-  background-image: url(img/45-3.png);
-
-}
-
-.feedbacks::after {
+.four-point-five_items:nth-child(3) .text {
   background-image: url(img/45-purple.png);
 }
 
-.freebies::before {
-  background-image: url(img/45-4.png);
-  width: 51px;
-  height: 54px;
+.four-point-five_items:nth-child(4) .text {
+  background-image: url(img/45-yellow.png);
 }
 
-.freebies::after {
-  background-image: url(img/45-yellow.png);
+.projects {
+  background: url(img/45-1.png) center top/51px 48px no-repeat;
+}
+
+.satisfied {
+  background: url(img/45-2.png) center top/47px 50px no-repeat;
+}
+
+.feedbacks {
+  background: url(img/45-3.png) center top/51px 44px no-repeat;
+}
+
+.freebies {
+  background: url(img/45-4.png) center top/51px 46px no-repeat;
 }
 
 @media (max-width: 960px) {
